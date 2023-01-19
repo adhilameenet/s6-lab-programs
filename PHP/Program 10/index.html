@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Program 10</title>
+    </head>
+    <body>
+        <h3>Enter Your Radius</h3>
+        <input id="radius" type="text">
+        <button onclick="findAreaAndCircumeference()">Click</button>
+        <p id="area"></p>
+        <p id="circumference"></p>
+    </body>
+    <script>
+        function findAreaAndCircumeference() {
+            var area = document.getElementById('area');
+            var circumference = document.getElementById('circumference');
+            var radius = document.getElementById('radius').value;
+            area.innerHTML = `Area = ${Math.PI * radius * radius}`
+            circumference.innerHTML = `Circumference = ${2 * Math.PI * radius}`
+        }
+    </script>
+</html>
