@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Program 13</title>
+    </head>
+    <style>
+        h2 {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h2>Multiplication Table</h2><hr>
+        Enter a Number <input type="number" id="number" required>
+        <input type="button" value="Generate" onclick="generateTable()">
+        <p id="table"></p>
+        <script>
+           function generateTable() {
+            var number = document.getElementById('number').value;
+            var tableBox = document.getElementById('table')
+            var table = ""
+            for(var i = 1; i <= 10; i++) {
+                table += `<h3> ${number} x ${i} = ${number * i}</h3>`
+            }
+            tableBox.innerHTML = table
+           }    
+        </script>
+    </body>
+</html>

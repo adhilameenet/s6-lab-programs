@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Program 15</title>
+    </head>
+    <body>
+        <button onclick="changeColor()">Change Color</button>
+        <script>
+              function changeColor() {
+                var colors = ["red", "green", "blue", "purple", "yellow"];
+                var random = Math.floor(Math.random() * colors.length)
+                document.body.style.backgroundColor = colors[random]
+              }
+        </script>
+    </body>
+</html>

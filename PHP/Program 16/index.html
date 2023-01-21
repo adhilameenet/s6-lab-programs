@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Program 16</title>
+    </head>
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        p {
+            border-radius: 12px;
+            padding: 10px 30px;
+            border: 2px solid gray;
+            font-size: 120px;
+        }
+    </style>
+    <body>
+        <div>
+            <p id="time"></p>
+        </div>    
+    </body>
+    <script>
+        setInterval(() => {
+            var currentTime = new Date();
+            var hour = currentTime.getHours()
+            var minute = currentTime.getMinutes()
+            var second = currentTime.getSeconds()
+            if(hour < 10) {
+                hour = "0" + hour 
+            }
+            if(minute < 10) {
+                minute = "0" + minute 
+            }
+            if(second < 10) {
+                second = "0" + second
+            }
+            var timeContainer = document.getElementById('time')
+            timeContainer.innerHTML = `${hour} : ${minute} : ${second}`
+        }, 1000);
+
+    </script>
+</html>

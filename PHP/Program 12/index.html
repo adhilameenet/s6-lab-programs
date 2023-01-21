@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Program 12</title>
+    </head>
+    <body onload="loadEvent()">
+        <form onsubmit="submitEvent(event)">
+            <input type="text" id="input" onblur="blurEvent()" onchange="changeEvent()">
+            <button type="reset" onclick="btnClick()">Reset</button>
+            <button type="submit">Click</button>
+        </form>
+        <p id="demo"></p>
+        <script>
+            
+            function loadEvent() {
+                document.body.style.backgroundColor = 'aqua';
+            }
+            function btnClick() {
+                alert("Form Reset")
+            }
+            function blurEvent() {
+                var input = document.getElementById('input')
+                input.value = input.value.toUpperCase()
+                
+            }
+            function submitEvent(event) {
+                event.preventDefault()
+                alert("The Form has been submitted Successfully!");
+            }
+            function changeEvent() {
+                var demo = document.getElementById('demo')
+                var input = document.getElementById('input').value
+                demo.innerHTML = `You Typed : ${input}` ;
+            }
+        </script>
+    </body>
+</html>

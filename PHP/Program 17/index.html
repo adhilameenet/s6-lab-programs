@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Program 17</title>
+    </head>
+    <style>
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    </style>
+    <body>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Name"><br><br>
+            <input type="password" id="password" min="4" placeholder="Password"><br><br>
+            Hobbies <br><br>
+           <div class="hobbies">
+            <input type="checkbox">Watch Movies <br>
+            <input type="checkbox">Play Football <br>
+            <input type="checkbox">Play Cricket <br><br>
+           </div>
+            Choose a Car <br><br>
+            <select required>
+                <option>BMW</option>
+                <option>Volvo</option>
+                <option>Audi</option>
+                <option>Maruti</option>
+            </select>
+            <br><br>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <script>
+            var form = document.getElementById('myForm')
+            form.addEventListener('submit', validateForm)
+
+            function validateForm(event) {
+                event.preventDefault()
+                var name = document.getElementById('name').value
+                var password =  document.getElementById('password').value
+                if(name == "") {
+                    return alert("Name is Required")
+                }
+                if(password == "") {
+                    return alert("Password is Required")
+                }
+                alert("Form Submitted Successfully!!")
+            }
+        </script>
+    </body>
+</html>
