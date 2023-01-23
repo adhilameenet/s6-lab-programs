@@ -11,7 +11,7 @@ class Server {
             InputStream in = cs.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String str = br.readLine();
-            System.out.println("client data is " + str);
+            System.out.println("Client data is " + str);
         }
     }
 }

@@ -1,31 +1,44 @@
-class CheckGreatest{
-    void greatest( int a, int b) {
-        if (a > b){
-            System.out.println( a + " is Greatest");
+import java.util.Scanner;
+class A {
+    void greatest() {
+        Scanner sc = new Scanner(System.in);
+        int a,b;
+        System.out.print("Enter two Numbers : ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        if( a > b ) {
+            System.out.println(a + " is greatest.");
         } else {
-            System.out.println( b + " is Greatest");
+            System.out.println(b + " is greatest.");
         }
     }
-    void greatest(int a, int b, int c) {
-        if (a > b) {
-			if( a > c ) {
-				System.out.println( a + " is Greatest");
-			} else {
-				System.out.println( c + " is Greatest");
-			}
-		} else {
-			if( b > c) {
-				System.out.println( b + " is Greatest");
-			} else {
-				System.out.print( c + "is Greatest");
-			}
-		}
+}
+class B extends A {
+    void greatest() {
+        Scanner sc = new Scanner(System.in);
+        int a,b,c;
+        System.out.print("Enter three Numbers : ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        if( a > b ) {
+            if( a > c ){
+                System.out.println(a + " is greatest.");
+            } else {
+                System.out.println(c + " is greatest.");
+            }
+        } else if ( b > c ) {
+            System.out.println(b + " is greatest.");
+        } else {
+            System.out.println(c + " is greatest.");
+        }
     }
 }
 class GreatestNumber {
-    public static void main(String[] args) {
-        CheckGreatest c = new CheckGreatest();
-        c.greatest(10, 20);
-        c.greatest(12, 23, 6);
+    public static void main(String args[]) {
+        A a = new A();
+        B b = new B();
+        a.greatest();
+        b.greatest();
     }
 }
