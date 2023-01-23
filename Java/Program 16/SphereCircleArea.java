@@ -1,32 +1,35 @@
-interface Shape {
-    double getArea();
+import java.util.Scanner;
+interface shape {
+    void area();
 }
+class circle implements shape{
+public void area(){
+    double area;
+    int radius;
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Radius of the Circle : ");
+    radius = sc.nextInt();
+    area = 3.14 * radius * radius;
+    System.out.println("Area of the Circle : " + area);
 
-class Circle implements Shape {
-    private double radius;
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-    public double getArea() {
-        return Math.PI * Math.pow(radius, 2);
+}
+}
+class sphere implements shape{
+    public void area() {
+        double area;
+        int radius;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter radius of the Sphere : ");
+        radius = sc.nextInt();
+        area = 4 * 3.14 * radius * radius;
+        System.out.println("Area of the Sphere : "+ area);
     }
 }
-
-class Sphere implements Shape {
-    private double radius;
-    public Sphere(double radius) {
-        this.radius = radius;
-    }
-    public double getArea() {
-        return 4 * Math.PI * Math.pow(radius, 2);
-    }
-}
-
-public class SphereCircleArea {
-    public static void main(String[] args) {
-        Circle circle = new Circle(5);
-        System.out.println("Area of Circle: " + circle.getArea());
-        Sphere sphere = new Sphere(5);
-        System.out.println("Area of Sphere: " + sphere.getArea());
+class SphereCircleArea {
+    public static void main(String args[]) {
+        circle c = new circle();
+        sphere s = new sphere();
+        c.area();
+        s.area();
     }
 }
