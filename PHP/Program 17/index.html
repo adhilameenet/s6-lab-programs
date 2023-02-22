@@ -1,54 +1,22 @@
 <html>
-    <head>
-        <title>Program 17</title>
-        <style>
-            form {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                flex-direction: column;
-            }
-        </style>
-    </head>
-    <body>
-        <form id="myForm">
-            <input type="text" id="name" placeholder="Name"><br><br>
-            <input type="password" id="password" min="4" placeholder="Password"><br><br>
-            Hobbies <br><br>
-           <div class="hobbies">
-            <input type="checkbox">Watch Movies <br>
-            <input type="checkbox">Play Football <br>
-            <input type="checkbox">Play Cricket <br><br>
-           </div>
-            Choose a Car <br><br>
-            <select required>
-                <option>BMW</option>
-                <option>Volvo</option>
-                <option>Audi</option>
-                <option>Maruti</option>
-            </select>
-            <br><br>
-            <div>
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-        <script>
-            var form = document.getElementById('myForm')
-            form.addEventListener('submit', validateForm)
-
-            function validateForm(event) {
-                event.preventDefault()
-                var name = document.getElementById('name').value
-                var password =  document.getElementById('password').value
-                if(name == "") {
-                    return alert("Name is Required")
-                }
-                if(password == "") {
-                    return alert("Password is Required")
-                }
-                alert("Form Submitted Successfully!!")
-            }
-        </script>
-    </body>
+<head>
+    <title>Program 17</title>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    <hr>
+    <form>
+        <input type="text" placeholder="Name"><br><br>
+        <input type="email" placeholder="Email Address"><br><br>
+        Gender <br>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <br><br>
+        Date of Birth <br>
+        <input type="date"><br><br>
+        <input type="tel" placeholder="Mobile No"><br><br>
+        <textarea cols="30" rows="10" placeholder="Address"></textarea><br><br>
+        <button>Submit</button>
+    </form>
+</body>
 </html>
