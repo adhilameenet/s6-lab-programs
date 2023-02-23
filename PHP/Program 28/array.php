@@ -31,7 +31,7 @@
             foreach($names_reversed as $name) {
                 echo "$name ";
             }
-            $index = array_search("Alex","$names");
+            $index = array_search("Alex", $names);
             echo "<br>";
             echo "Alex found at $index";
         ?>
