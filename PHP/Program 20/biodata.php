@@ -3,7 +3,7 @@
         <title>Program 20</title>
     </head>
     <body>
-        <form method="post" action="biodata.php">
+        <form method="post">
             Name  <input type="text" name="name"><br><br>
             Age  <input type="number" name="age"><br><br>
             Email  <input type="email" name="email"><br><br>
