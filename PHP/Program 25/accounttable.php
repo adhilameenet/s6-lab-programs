@@ -33,6 +33,15 @@
                     mysqli_query($conn, "DELETE FROM account WHERE account_no=$acount_no");
                 }
               }
+        
+              $result = mysqli_query($conn, "SELECT * FROM account");
+              echo "<table border='1'>";
+              echo "<tr><th>Account Number</th><th>Name</th><th>Amount</th></tr>";
+              while($row=mysqli_fetch_row($result)){
+                echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>";
+              }
+              echo "</table>";
+              mysqli_close($conn);
         ?>
     </body>
 </html>
