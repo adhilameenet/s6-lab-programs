@@ -27,7 +27,7 @@
                 $amount = $_POST["amount"];
                 $operation = $_POST["operation"];
                 if($operation == "update") {
-                    mysqli_query($conn, "UPDATE account SET amount=$amount WHERE account_no=$account_no");
+                    mysqli_query($conn, "UPDATE account SET name=$name,amount=$amount WHERE account_no=$account_no");
                 }
                 if($operation == "delete") {
                     mysqli_query($conn, "DELETE FROM account WHERE account_no=$acount_no");
