@@ -3,40 +3,13 @@
         <title>Program 14</title>
     </head>
     <body>
-        Enter The First Number  &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" required><br><br>
-        Enter The Second Number <input type="text" id="num2" required><br><br>
-        <button onclick="add()">Addition</button>
-        <button onclick="sub()">Subtraction</button>
-        <button onclick="mul()">Multiplication</button>
-        <button onclick="div()">Division</button>
-        <br><br>
-        Result :<span id="result"></span>
-        
+        <button onclick="changeColor()">Change Color</button>
         <script>
-            function add() {
-                var num1 = Number(document.getElementById('num1').value);
-                var num2 = Number(document.getElementById('num2').value);
-                var result = num1 + num2;
-                document.getElementById('result').innerHTML = result
-            }
-            function sub() {
-                var num1 = Number(document.getElementById('num1').value);
-                var num2 = Number(document.getElementById('num2').value);
-                var result = num1 - num2;
-                document.getElementById('result').innerHTML = result
-            }
-            function mul() {
-                var num1 = Number(document.getElementById('num1').value);
-                var num2 = Number(document.getElementById('num2').value);
-                var result = num1 * num2;
-                document.getElementById('result').innerHTML = result
-            }
-            function div() {
-                var num1 = Number(document.getElementById('num1').value);
-                var num2 = Number(document.getElementById('num2').value);
-                var result = num1 / num2;
-                document.getElementById('result').innerHTML = result
-            }
+              function changeColor() {
+                var colors = ["red", "green", "blue", "purple", "yellow"];
+                var random = Math.floor(Math.random() * colors.length)
+                document.body.style.backgroundColor = colors[random]
+              }
         </script>
     </body>
 </html>

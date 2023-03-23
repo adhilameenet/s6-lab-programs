@@ -1,44 +1,43 @@
 <html>
-    <head>
-        <title>Program 16</title>
-        <style>
-            div {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-            }
-            p {
-                border-radius: 12px;
-                padding: 10px 30px;
-                border: 2px solid gray;
-                font-size: 120px;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <p id="time"></p>
-        </div>    
-    </body>
+<head>
+    <title>Program 16</title>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    <hr>
+    <form>
+        <input type="text" id="name" placeholder="Name"><br><br>
+        <input type="email" id="email" placeholder="Email Address" required><br><br>
+        Gender <br>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <br><br>
+        Date of Birth <br>
+        <input type="date"><br><br>
+        <input id="mobile" placeholder="Mobile No"><br><br>
+        <textarea cols="30" rows="10" placeholder="Address"></textarea><br><br>
+        <button onclick="return validateForm()">Submit</button>
+    </form>
     <script>
-        setInterval(() => {
-            var currentTime = new Date();
-            var hour = currentTime.getHours()
-            var minute = currentTime.getMinutes()
-            var second = currentTime.getSeconds()
-            if(hour < 10) {
-                hour = "0" + hour 
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('name').value;
+            var mobile = document.getElementById('mobile').value;
+            if(!name) {
+                alert("Name Field is Required")
+                return false;
             }
-            if(minute < 10) {
-                minute = "0" + minute 
+            if(!mobile.length == 10) {
+                alert("Enter a Valid Mobile Number")
+                return false;
             }
-            if(second < 10) {
-                second = "0" + second
+            if(!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+                alert("Enter a Valid Email")
+                return false;
             }
-            var timeContainer = document.getElementById('time')
-            timeContainer.innerHTML = `${hour} : ${minute} : ${second}`
-        }, 1000);
-
+            alert("Form is Valid");
+            return true;
+        }
     </script>
+</body>
 </html>

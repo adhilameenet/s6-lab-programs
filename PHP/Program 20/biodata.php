@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Program 21</title>
+        <title>Program 20</title>
     </head>
     <body>
         <form method="post" action="biodata.php">

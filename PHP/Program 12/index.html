@@ -1,36 +1,27 @@
 <html>
     <head>
         <title>Program 12</title>
+        <style>
+            h2 {
+                text-align: center;
+            }
+        </style>
     </head>
-    <body onload="loadEvent()">
-        <form onsubmit="submitEvent(event)">
-            <input type="text" id="input" onblur="blurEvent()" onchange="changeEvent()">
-            <button type="reset" onclick="btnClick()">Reset</button>
-            <button type="submit">Click</button>
-        </form>
-        <p id="demo"></p>
+    <body>
+        <h2>Multiplication Table</h2><hr>
+        Enter a Number <input type="number" id="number" required>
+        <input type="button" value="Generate" onclick="generateTable()">
+        <p id="table"></p>
         <script>
-            
-            function loadEvent() {
-                document.body.style.backgroundColor = 'aqua';
+           function generateTable() {
+            var number = document.getElementById('number').value;
+            var tableBox = document.getElementById('table')
+            var table = ""
+            for(var i = 1; i <= 10; i++) {
+                table += `<p> ${number} x ${i} = ${number * i}</p>`
             }
-            function btnClick() {
-                alert("Form Reset")
-            }
-            function blurEvent() {
-                var input = document.getElementById('input')
-                input.value = input.value.toUpperCase()
-                
-            }
-            function submitEvent(event) {
-                event.preventDefault()
-                alert("The Form has been submitted Successfully!");
-            }
-            function changeEvent() {
-                var demo = document.getElementById('demo')
-                var input = document.getElementById('input').value
-                demo.innerHTML = `You Typed : ${input}` ;
-            }
+            tableBox.innerHTML = table
+           }    
         </script>
     </body>
 </html>

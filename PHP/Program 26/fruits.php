@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Program 27</title>
+        <title>Program 26</title>
     </head>
     <body>
         <h3>Fruits</h3><hr>

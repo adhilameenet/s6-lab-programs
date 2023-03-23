@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Program 20</title>
+        <title>Program 19</title>
     </head>
     <body>
         <h2>Fibonacci Numbers</h2>
@@ -13,6 +13,7 @@
             $a = 0;
             $b = 1;
             $c = $a + $b;   
+            echo $a." ".$b." ";
             while( $c <= $num ) {
                 echo "$c ";
                 $a = $b;

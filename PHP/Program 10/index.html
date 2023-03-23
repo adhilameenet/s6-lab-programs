@@ -3,19 +3,36 @@
         <title>Program 10</title>
     </head>
     <body>
-        <h3>Enter Your Radius</h3>
-        <input id="radius" type="text">
-        <button onclick="findAreaAndCircumeference()">Click</button>
-        <p id="area"></p>
-        <p id="circumference"></p>
+        <script>
+            var side1 = Number(prompt("Enter the First Side :"))
+            var side2 = Number(prompt("Enter the Second Side :"))
+            var side3 = Number(prompt("Enter the Third Side :"))
+    
+            function isTriangle(side1,side2,side3) {
+                if(side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+    
+            function findTriangleAreaAndType(side1,side2,side3) {
+                var s = (side1 + side2 + side3) / 2;
+                var area = Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
+                if(side1 == side2 && side2 == side3) {
+                    return alert("This is an equilateral triangle with area " + area)
+                } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+                    return alert("This is an isosceles triangle with area " + area);
+                } else {
+                    alert("This is a scalene triangle with area " + area)
+                }
+            }
+    
+            if(isTriangle(side1,side2,side3)) {
+                findTriangleAreaAndType(side1,side2,side3)
+            } else {
+                alert("The given sides cannot form a triangle");
+            }
+        </script>
     </body>
-    <script>
-        function findAreaAndCircumeference() {
-            var area = document.getElementById('area');
-            var circumference = document.getElementById('circumference');
-            var radius = document.getElementById('radius').value;
-            area.innerHTML = `Area = ${Math.PI * radius * radius}`
-            circumference.innerHTML = `Circumference = ${2 * Math.PI * radius}`
-        }
-    </script>
 </html>

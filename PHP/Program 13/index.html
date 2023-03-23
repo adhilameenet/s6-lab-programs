@@ -1,27 +1,42 @@
 <html>
     <head>
         <title>Program 13</title>
-        <style>
-            h2 {
-                text-align: center;
-            }
-        </style>
     </head>
     <body>
-        <h2>Multiplication Table</h2><hr>
-        Enter a Number <input type="number" id="number" required>
-        <input type="button" value="Generate" onclick="generateTable()">
-        <p id="table"></p>
+        Enter The First Number  &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" required><br><br>
+        Enter The Second Number <input type="text" id="num2" required><br><br>
+        <button onclick="add()">Addition</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button>
+        <br><br>
+        Result :<span id="result"></span>
+        
         <script>
-           function generateTable() {
-            var number = document.getElementById('number').value;
-            var tableBox = document.getElementById('table')
-            var table = ""
-            for(var i = 1; i <= 10; i++) {
-                table += `<h3> ${number} x ${i} = ${number * i}</h3>`
+            function add() {
+                var num1 = Number(document.getElementById('num1').value);
+                var num2 = Number(document.getElementById('num2').value);
+                var result = num1 + num2;
+                document.getElementById('result').innerHTML = result
             }
-            tableBox.innerHTML = table
-           }    
+            function sub() {
+                var num1 = Number(document.getElementById('num1').value);
+                var num2 = Number(document.getElementById('num2').value);
+                var result = num1 - num2;
+                document.getElementById('result').innerHTML = result
+            }
+            function mul() {
+                var num1 = Number(document.getElementById('num1').value);
+                var num2 = Number(document.getElementById('num2').value);
+                var result = num1 * num2;
+                document.getElementById('result').innerHTML = result
+            }
+            function div() {
+                var num1 = Number(document.getElementById('num1').value);
+                var num2 = Number(document.getElementById('num2').value);
+                var result = num1 / num2;
+                document.getElementById('result').innerHTML = result
+            }
         </script>
     </body>
 </html>

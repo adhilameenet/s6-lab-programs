@@ -1,6 +1,5 @@
-h1 { font-size: .67em }
-h2 { font-size: .75em }
-h3 { font-size: .83em }
-h4 { font-size: 1em }
-h5 { font-size: 1.5em }
-h6 { font-size: 1.67em }
+h1 { text-align: center }
+img { 
+    border-radius: 30px;
+    width: 200px;
+}
