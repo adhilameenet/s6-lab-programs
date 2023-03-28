@@ -12,7 +12,7 @@
             $num = $_POST['num'];
             $a = 0;
             $b = 1;
-            $c = $a + $b;   
+            $c = 1;   
             echo $a." ".$b." ";
             while( $c <= $num ) {
                 echo "$c ";
