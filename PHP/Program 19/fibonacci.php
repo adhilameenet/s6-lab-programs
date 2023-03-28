@@ -13,8 +13,7 @@
                 $num = $_POST['num'];
                 $a = 0;
                 $b = 1;
-                $c = 1;   
-                echo $a." ".$b." ";
+                $c = 0;   
                 while( $c <= $num ) {
                     echo "$c ";
                     $a = $b;
