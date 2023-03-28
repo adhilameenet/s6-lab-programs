@@ -9,16 +9,18 @@
             <button type="submit">Click</button>
         </form>
         <?php
-            $num = $_POST['num'];
-            $a = 0;
-            $b = 1;
-            $c = 1;   
-            echo $a." ".$b." ";
-            while( $c <= $num ) {
-                echo "$c ";
-                $a = $b;
-                $b = $c;
-                $c = $a + $b;
+            if($_POST) {
+                $num = $_POST['num'];
+                $a = 0;
+                $b = 1;
+                $c = 1;   
+                echo $a." ".$b." ";
+                while( $c <= $num ) {
+                    echo "$c ";
+                    $a = $b;
+                    $b = $c;
+                    $c = $a + $b;
+                }
             }
         ?>
     </body>
