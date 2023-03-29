@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Spinne</string>
+    <string-array name="lang">
+        <item>C</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>Android</item>
+        <item>Python</item>
+    </string-array>
+</resources>
