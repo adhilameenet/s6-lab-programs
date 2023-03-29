@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         String f1[] = {"1","2","3","4","5","6","7","8","9"};
         ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_list_item_1,f1);
         gd.setAdapter(ad);
-        gd.setOnItemClickListener(this::onItemClick);
+        gd.setOnItemClickListener(this);
     }
     public void onItemClick(AdapterView parent, View view, int position,long id) {
         String s = parent.getItemAtPosition(position).toString();
